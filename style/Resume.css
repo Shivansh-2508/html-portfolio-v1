@@ -1,0 +1,143 @@
+/* General styles */
+body {
+    background-color: #081b29; 
+    color: #ededed; 
+    font-family: cormorant;
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: relative;
+    background-color: #dcc9a8;
+    padding: 10px;
+    text-align: right;
+    width:auto
+
+}
+
+header a {
+    color: #1a0202; 
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 10px;
+}
+/* Content section */
+.content {
+    position: relative;
+    height: 100%;
+    width: 70vmax;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px;
+    box-shadow: 0 0 10px rgba(7, 0, 0, 0.1);
+    background-color: #e5decf;
+    color: #0a0000; 
+}
+.content h1 {
+    color: #0e0101;
+    font-size: 2rem;
+    margin-top: auto;
+    margin-bottom: 2px;
+}
+.content h2 {
+    color: #0e0101;
+    border-bottom: 2px solid #100202; 
+}
+.content h3{
+    margin-bottom: 3px;
+    margin-top: 1px;
+}
+.content p {
+    line-height: 1;
+    
+    margin: 0;
+}
+.content li{
+    margin: 2px;
+}
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-section {
+    animation: fadeInUp 1s forwards;
+}
+
+/* Certificates section */
+.certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.certificates img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+/* Background animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Twinkle.gif');
+    z-index: -2;
+    opacity: 0.6; 
+    pointer-events: none;
+    animation: twinkling 10s linear infinite;
+}
+
+
+
+/* Passport photo section */
+.passport-photo {
+    float: right;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.passport-photo img {
+    position: relative;
+    width: 10rem; 
+    height: auto; 
+    border-radius: 50%; 
+    top: -5vmax;
+    right: 1vmax;
+}
+
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Navigation styles */
+.content a{
+    color: #0a0000;
+
+
+}

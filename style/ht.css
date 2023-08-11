@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #d3c5a6;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.coin-container {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  perspective: 1000px;
+}
+
+.coin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  backface-visibility: hidden; 
+}
+.front img{
+  width: 100%;
+}
+.back img{
+  width: 100%;
+}
+
+.front {
+  animation-delay: 50ms;
+  transform: rotateX(0);
+}
+
+.back {
+  animation-delay: 50ms;
+  transform: rotateX(180deg);
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0) ;
+
+  }
+  50%{
+    scale: 1.5;
+  }
+  100% {
+    
+    transform: rotateX(1060deg) ;
+  }
+}
+
+.flip {
+  animation: flip 1s; /* Apply the flip animation class */
+}
+
+button {
+  background-color: #030303;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 1s;
+}
+
+button:hover {
+  background-color: #070708;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+/* Style the text inside the coin */
+.front div,
+.back div {
+  color: #333;
+  font-size: 24px;
+}

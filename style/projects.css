@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: monograph, Arial, sans-serif;
+}
+
+:root {
+  --bg-color: #000; 
+  --second-bg-color: #0d466c;
+  --text-color: #ededed;
+  --main-color: #dcc9a8;
+}
+
+html {
+  font-size: 80%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem 9%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+/* Existing CSS styles */
+
+/* Pop-up animation on hover */
+/* Existing CSS styles */
+
+/* Pop-up animation on hover */
+
+
+.project {
+  max-width: 30px;
+  background-color: var(--second-bg-color);
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--text-color);
+  transition: transform 0.3s; /* Add a transition for smooth animation */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Vertically align content */
+
+}
+
+.project:hover {
+  transform: scale(1.07); /* Apply a translateY transformation to create a pop-up effect */
+}
+
+.pf-card img {
+  
+  width: 75%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.pf-card h2 {
+  margin-top: 1rem;
+  color: var(--main-color);
+  text-align: justify;
+}
+
+.pf-card p {
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.pf-card a {
+  display: inline-flex;
+  padding: 8px 16px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-align: justify;
+  margin-top: 1rem; /* Add some margin between content and button */
+}
+
+/* Rest of the CSS styles */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Twinkle.gif'); 
+  z-index: -1;
+  opacity: 0.8; 
+  pointer-events: none;
+}
+
+/* stock.css */
+
+/* Existing CSS styles */
+
+.pf-card-list {
+  animation: fadeInUp 1s forwards;
+  display: flex;
+  color: white;
+  font-family: 'visby-bold';
+  font-style: bold;
+  padding: 3rem;
+  overflow-x:scroll;
+}
+
+.pf-card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+.pf-card-list::-webkit-scrollbar-thumb {
+  background:transparent;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 0%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.pf-card-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pf-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  /* Increase the width and height of the cards */
+  width: 450rem;
+  height: 40rem;
+  min-width: 300px;
+  margin-left: 20px;
+  border-radius: 16px;
+  background-color: #141414;
+  transition: .7s;
+  border: 2px solid var(--main-color);
+ 
+}
+
+.pf-card:hover {
+  transform: translateY(-2rem);box-shadow: -0.7rem 0 1.2rem #dcc9a8;
+ ;
+}
+
+.pf-card:hover~.pf-card {
+  transform: translate(150px); /* Adjust the translation value for the hover effect */
+}
+
+.pf-card:not(:first-child) {
+  margin-left: -150px; /* Adjust the margin-left value to match the translation value */
+}
+
+/* Rest of the CSS styles */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

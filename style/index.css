@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: cormorant;
+}
+
+:root {
+  --bg-color: #041623;
+  --second-bg-color: #1b7cbd;
+  --text-color: #f7f5b5;
+  --main-color: #dcc9a8;
+}
+
+html {
+  font-size: 80%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 6rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.header .logo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.menu-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  width: 60px; /* Set the width as needed */
+  height: 60px; /* Set the height as needed */
+  top: -7px;
+  left: 10px;
+}
+
+.menu-icon i {
+  font-size: 30px;
+}
+.section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  top: 45%;
+}
+
+.Home-content {
+  text-align: center;
+  max-width: 600rem;
+   /* Add some margin to create space between the profile image and h3 element */
+  
+}
+
+.Home-content h1 {
+  color: var(--main-color);
+  font-size: 4.3vmax;
+  font-weight: 700;
+  line-height: 1.3;
+  width: auto;
+  animation: profileImageAnimation 1s ease 1;
+  animation-fill-mode: forwards;
+}
+
+.Home-content .text-animate {
+  position: relative;
+  width: auto;
+}
+
+.Home-content .text-animate h3 {
+  font-size: 1.5vmax;
+  font-weight: 800;
+  width: auto;
+  color:var(--main-color) ;
+  animation: myAnimation 1s ease 1;
+  animation-fill-mode: forwards;
+
+}
+
+.Home-content p {
+  font-size: 20px;
+  margin: 2rem 0 4rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vmax;
+  height: 3vmax;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: 1.8rem;
+  font-size: 1.4vmax;
+  font-weight: 550;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease ;
+  margin-top: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  animation: myAnimation 1s ease 1;
+  animation-fill-mode: forwards;
+  
+}
+
+.btn-box .btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--bg-color);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.btn-box .btn:hover {
+  scale: 105%;
+  background-color: var(--main-color);
+  color: black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+  
+}
+
+.btn-box .btn:hover::after {
+  width: 100%;
+  
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  
+  transform: scale(1.2) rotatex(50deg);
+}
+
+.social-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Your other CSS styles... */
+
+.profile-image {
+  position: relative;
+  top: 5vh;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px; /* Set a fixed height for the profile image container */
+  margin-top: 50px;
+}
+
+.profile-image img {
+  
+  height: 23vh;
+  border-radius: 50%;
+  border: 2px solid #dcc9a8;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Your other CSS styles... */
+
+
+@keyframes profileImageAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: scale(0) ;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.profile-image img {
+  animation: myAnimation 1s ease-out 1;
+  animation-fill-mode: forwards;
+}
+  #back{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+  }
+  

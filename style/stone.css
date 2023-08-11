@@ -1,0 +1,91 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #b5afa3;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    gap: 1rem;
+}
+
+.option {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: transform 0.1s ease; /* Add the transition property */
+}
+
+.option:hover {
+    transform: scale(1.1); /* Apply the hover animation */
+}
+
+.result {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    animation-duration: 1s ; /* Duration of the result animation */
+}
+
+.result.won {
+    animation-name: winningAnimation;
+
+}
+
+.result.lost {
+    animation-name: losingAnimation;
+}
+
+@keyframes winningAnimation {
+    0% {
+        transform: scale(1);;
+        color: #000;
+    }
+    50% {
+        transform: scale(1.5);;
+        color: #0f0; 
+    }
+    100% {
+        transform: scale(1);;
+        color: #000;
+    }
+}
+
+@keyframes losingAnimation {
+    0% {
+        transform: scale(1);
+        color: #000;
+    }
+    50% {
+        transform: scale(0.5);
+        color: #f00; /* Red color during the animation */
+    }
+    100% {
+        transform: scale(1);
+        color: #000;
+    }
+}
+

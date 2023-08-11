@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Menu</title>
+        <!-- Add Font Awesome CSS link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style/menu.css">
+    </head>
+    <body>
+        <header>
+            <h1>Pratham Da Theka</h1>
+            <!-- Add cart icon -->
+            <button class="cart-icon" onclick="toggleCart()">
+                <i class="fa fa-shopping-cart" style=" margin-right: 10px;"></i>
+                <span id="cart-count"  ">0</span>
+            </button>
+            <div class="cart-container" id="cart-container">
+                <div class="cart">
+                    <h2>Cart</h2>
+                    <div id="cart-items-list"></div>
+                    <ul id="cart-items"></ul>
+                    <p>Total: ₹<span id="cart-total">0.00</span></p>
+                    <button onclick="checkout()">Checkout</button>
+                    <button onclick="clearCart()">Clear Cart</button>
+                </div>
+        </div>
+    </header>
+    
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <img src="images/Magic-Moments-Grain-Vodka-1.jpg" alt="MM 750ml">
+                    <h3>Magic moments</h3>
+                    <p>It is a triple distilled grain spirit manufactured in one of India's largest factories, Radico Khaitan Ltd. It has an alcohol percentage of 37.5%.</p>
+                    <p>₹800</p>
+                    <button onclick="addToCart('MM 750ml', 800)">Add to Cart</button>
+                </li>
+                <!-- Add more menu items as needed -->
+                <li>
+                    <img src="images/Bacardi-Limon.jpg" alt="Bacardi 750ml">
+                    <h3>Bacardi limon</h3>
+                    <p>Named after the Spanish word for lemon, Bacardi Limon is a carefully crafted product that infuses Bacardi rum to the sense of the royal family of citrus fruits: the lemon, the lime and the grapefruit.</p>
+                    <p>₹1600</p>
+                    <button onclick="addToCart('Bacardi 750ml', 1600)">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="images/absolut.jpg" alt="Dish 1">
+                    <h3>Absolute</h3>
+                    <p>Clean and complex on the nose, with subtle cereal notes. Smooth and mellow to taste with a distinct character of peppery grain, followed by a hint of dried fruit and sourdough bread</p>
+                    <p>₹2250</p>
+                    <button onclick="addToCart('Absolute 750ml', 2250)">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="images/Blenders-Pride.webp" alt="Dish 1">
+                    <h3>Blenders  pride</h3>
+                    <p>Blenders Pride is the leading core brand of premium blended whisky within the Pernod Ricard portfolio in India. Without artificial flavoring, this whisky is made by blending Indian grain spirit with imported Scottish malt.</p>
+                    <p>₹1400</p>
+                    <button onclick="addToCart('Blenders 750ml', 1400)">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="images/Antiquity-750ml-WHITE.jpg" alt="Dish 1">
+                    <h3>Antiquity </h3>
+                    <p>Made of the finest Indian malts and rare Scotch carefully blended with premium grain spirit, it is painstakingly distilled in copper pot stills, matured and mellowed in imported white oak casks and fused with premium Scotch.</p>
+                    <p>₹1500</p>
+                    <button onclick="addToCart('Antiquity 750ml', 1500)">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="images/jack.jpg" alt="Dish 1">
+                    <h3>jack daniels</h3>
+                    <p> Light with plenty of sweetness. There are hints of dry spice and oily nuts, a touch of smoke. Palate: Quite smooth and soft with notes of banana milkshake, a mixed nut note, a touch of caramel with crème anglaise. </p>
+                    <p>₹3250</p>
+                    <button onclick="addToCart('jack', 3250)">Add to Cart</button>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </main>
+    <div class="cart-container" id="cart-container">
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+    <script src="js/menu.js"></script>
+</body>
+</html>

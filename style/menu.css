@@ -1,0 +1,160 @@
+/* ... (existing styles) ... */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Dark background color */
+    color: #fff; /* White text color */
+  }
+  
+  /* ... (existing styles) ... */
+  
+  header {
+    position: relative; /* Add this to make it a container for the absolute-positioned cart */
+    background-color: #E64949; /* Orange header background color */
+    color: #fff;
+    padding: 1rem;
+  }
+header h1{
+    font-size: 3vmax;
+}
+.cart-icon {
+    position: absolute;
+    font-size: 30px;
+    top: 1px; /* Adjust the top distance as needed to position the cart icon */
+    right: 2px; /* Adjust the right distance as needed to position the cart icon */
+    cursor: pointer;
+    background-color: #e7e7e7; /* Dark gray background for the cart icon */
+    padding: 8px 12px;
+    border-radius: 10%;
+}
+
+.cart-container {
+    position: absolute;
+    top: 70px; /* Adjust the top distance to position the cart container below the header */
+    right: 20px; /* Adjust the right distance to position the cart container at the top right corner */
+    background-color: #3a3a3a; /* Dark gray background for the cart container */
+    padding: 10px;
+    z-index: 9999;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Hide the cart container by default */
+}
+
+/* ... (existing styles for the cart) ... */
+
+
+
+
+@keyframes pulseHeader {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ... (existing styles) ... */
+.menu {
+    text-align: center;
+}
+
+.menu h2 {
+    margin-bottom: 20px;
+    color: #E64949; /* Orange header color */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu li {
+    flex: 0 0 20%; /* Each item occupies 20% of the container width */
+    margin: 2vmax;
+    text-align: left;
+    border: 2px solid #E64949; /* Orange border around menu items */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #3a3a3a; /* Dark gray background for menu items */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.menu img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu h3 {
+    margin-top: 10px;
+    color: #ffefd5; /* Papaya Whip text color for menu item names */
+}
+
+.menu p {
+    margin-top: 5px;
+    font-size: 1vmax;
+    color: #fff; /* White text color for menu item descriptions */
+}
+
+.menu button {
+    background-color: #E64949; /* Orange button background color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #ff6347; /* Hot red button background on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu li {
+        flex: 0 0 45%; /* Each item occupies 45% of the container width */
+        margin: 1vmax;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu li {
+        flex: 0 0 80%; /* Each item occupies 80% of the container width */
+        margin: 1vmax;
+    }
+}
+
+
+
+.cart button {
+    /* Apply the theme to buttons within the .cart class */
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 8px 16px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.cart button:hover {
+    background-color: #E64949;
+    color: var(--main-color);
+    transform: scale(1.05);
+}
+
+/* ... (existing CSS rules) ... */
